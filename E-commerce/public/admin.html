@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Admin Page</title>
+<link rel="icon" href="images/icon.jpg" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet"href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>  
+<header>
+	<a href="index.html"><h2 class="logo">LotaZ</h2></a>&emsp;
+<button onclick="document.location='products.html'" id='buy'>Product Page</button>
+</header>
+<section class="productArea">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="productAddBox">
+					<h2 id="headStatus">Add Product</h2>
+					<div class="col-lg-12">
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label> Product Name:</label></li>
+								<li><input type="text" id="productName" name="productName"  placeholder="Product Name" required="required"></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label>Product Details:</label></li>
+								<li><textarea id="productDetails" name="productDetails"  placeholder="Product Details" required="required" ></textarea></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label>Product Price:</label></li>
+								<li><input type="number"  id="productPrice" name="productPrice"  placeholder="Product Price" min="0" required="required" /></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label>Product Category:</label></li>
+								<li><select name="category" id="category">
+										<option value="">--Select Category--</option>
+										<option value="fashion">Fashion</option>
+										<option value="electronics">Electronics</option>
+										<option value="books">Books</option>
+										<option value="grocery">Grocery</option>
+										<option value="baby">Baby</option>
+										<option value="accessories">MotorBike Excecories</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label>Quantity:</label></li>
+								<li><input type="number" id="quantity" name="quantity"  placeholder="" required="required" /></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul class="productField-list">
+								<li><label>Added Date:</label></li>
+								<li><input type="date" id="date" name="date"  placeholder="" required="required" /></li>
+							</ul>
+						</div>
+						<div class="form-group" >
+							<ul class="productField-list">
+								<li> <label for="productAvailability">Product Availability:</label></li>
+								<li><select id="productAvailability" required>
+        								<option value="">--Please select--</option>
+        								<option value="In_Stock">In Stock</option>
+       								<option value="Out_of_Stock">Out of Stock</option>
+      								</select>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group"> 
+						<ul class="productField-list">
+							<div class="col-md-12">
+								<div class="show-image" >
+									<img src="images/placeholder.png" alt="" id="holdImg" class="img-responsive" height="300px" width="300px">
+								</div>
+							</div>
+						</ul>
+					</div>
+					<div class="form-group"> 
+						<ul class="productField-list">
+							<div class="dropzone-wrapper">
+								<input type="file" name="prImage" id="prImage" class="dropzone">
+									<div class="dropzone-desc">
+			    						<p>Choose an Image file or Drag it here.</p>
+									</div>
+							</div>
+						</ul>
+					</div>
+					<div class="form-group">
+						<ul class="productField-list">
+							<li>&nbsp;</li>
+							<li><button id="addBtn" class="btn btn-success addBtn">Add Product</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="showProductTable">
+					<h3>Product Table</h3>
+					<table id="productTable" class="table table-responsive table-bordered"></table>
+					<button id="clearBtn" class="btn btn-danger">All Clear</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>  
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+</html>

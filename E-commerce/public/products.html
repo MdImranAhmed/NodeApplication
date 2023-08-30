@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LotaZ</title>
+<link rel="icon" href="images/icon.jpg" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/slick.min.css">
+<link rel="stylesheet" href="css/slick-theme.min.css">
+    <link rel="stylesheet" href="css/products.css">
+
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h2 class="logo">LotaZ</h2></a>
+      <button id="view-cart-button" onclick="viewCart()" style="margin-left:70%" ><i class="fa fa-shopping-cart"  ></i> View Cart</button>
+<button onclick="document.location='admin.html'" id="admin" style="margin-left:5%"><i class=" fa fa-user"></i> Admin</button>
+    </header>
+    <div class="slider">
+      <img src="images/img1.png">
+      <img src="images/img2.png">
+      <img src="images/img3.png">
+      <img src="images/img4.png">
+    </div>
+<nav>
+  </div>
+<div id="src"><input type="text" id="search-input" placeholder="Search Product...">&emsp;</div>
+<nav>
+<div id="category-filters">
+      <label for="categorySelect" style="color:white;">&emsp;&emsp;Filter by category:</label></br>
+      <button data-category="all">All</button></br>
+      <button data-category="fashion">Fashion</button></br>
+      <button data-category="electronics">Electronics</button><br>
+      <button data-category="books">Books</button><br>
+      <button data-category="grocery">Grocery</button></br>
+      <button data-category="baby">Baby</button><br>
+      <button data-category="accessories">MotorBike Accessories</button><br>
+    </div>
+</nav>
+    <main id="product-list"></main>
+
+  <div id="product-container"></div>
+  <div id="product-display"></div>
+    <div id="cart" class="hidden">
+      <h2>Cart</h2>
+		<button id="close-cart-button" onclick="closeCart()" style="margin-left:55%"><i class="fa fa fa-remove"></i> Close Cart</button>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: $0.00</p>
+      <button id="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+
+<footer> All rights reserved! LotaZ  &copy; 2023 </footer>
+
+<span>
+<div id="itemAdd" class="notification">
+  Item has been added to cart!
+</div>
+<div id="itemQuantity" class="notification">
+  Item quanity updated in cart!
+</div>
+<div id="itemRemove" class="notification">
+  Item has been removed from cart!
+</div>
+</span>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+            $('.slider').slick({
+              autoplay: true,
+              autoplaySpeed: 2000,
+              dots: true,
+              infinite: true,
+              speed: 500,
+              fade: true,
+              cssEase: 'linear'
+            });
+          });     
+    </script>
+  </body>
+</html>
